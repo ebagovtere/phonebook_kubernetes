@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-configmap
+data:
+  MYSQL_PASSWORD: PASSWORD
+  MYSQL_DATABASE: phonebook
+  MYSQL_USER: ebubekir
+  MYSQL_DATABASE_HOST: mysql-service.default.svc.cluster.local
