@@ -3,7 +3,7 @@ apt-get update -y
 apt-get upgrade -y
 apt install git -y
 git clone https://github.com/ebagovtere/phonebook_kubernetes.git
-cd phonebook-kubernetes/kubernetes_files/
+cd phonebook_kubernetes/kubernetes_files/
 mv *.yaml /home/ubuntu  
 hostnamectl set-hostname kube-master
 chmod 777 /etc/sysctl.conf
