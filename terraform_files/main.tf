@@ -43,12 +43,12 @@ resource "aws_instance" "worker" {
 }
 
 resource "aws_iam_instance_profile" "ec2connectprofile" {
-  name = "ec2-connect-profile"
+  name = "ec2_connect_profile"
   role = aws_iam_role.ec2connectcli.name
 }
 
 resource "aws_iam_role" "ec2connectcli" {
-  name = "ec2-connect-cli"
+  name = "ec2_connect_cli"
   assume_role_policy = jsonencode({
     Version = "2012-10-17"
     Statement = [
@@ -105,9 +105,9 @@ data "template_file" "master" {
 }
 
 resource "aws_security_group" "tf-k8s-master-sec-gr" {
-  name = "${var.tag}-eba-master-sec-gr"
+  name = "${var.tag}-master-sec-gr"
   tags = {
-    Name = "${var.tag}-eba-master-sec-gr"
+    Name = "${var.tag}-master-sec-gr"
   }
 
   ingress {
